@@ -39,6 +39,13 @@ COMPONENTS:
             INHERITS: N/A
             COMPOSITION_IN: agent1
             CREATE: YES
+            METHODS:
+                Configure_Dut:
+                    TYPE: task
+                Reset_Dut:
+                    TYPE: task
+                run:
+                    TYPE: task 
     GENERATOR:
         genrator1:
             INHERITS: N/A
@@ -61,7 +68,15 @@ INTERFACES:
                 TYPE: logic
                 WIDTH: width
             INPB:
-                TYPE:
+                TYPE: 
 
 MAILBOXES:
     mbx1:
+        SOURCE: gen1
+        SINK: driver1
+        SIZE: N/A
+        TYPE: int
+
+DEFINES:
+    WIDTH: 8
+
