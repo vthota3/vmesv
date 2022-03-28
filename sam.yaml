@@ -4,38 +4,64 @@ COMPONENTS:
             INHERITS: N/A
             COMPOSITION_IN: N/A
             CREATE: YES
-        
+            FILE_PATH: N/A
+            CLK_GENRATOR:
+                clk1:
+                    frequency: 10khz
+                    duty_cycle: 50%
+            DUT_INSTATIATION:
+                adder_dut:
+                    DUT: adder
+                    INTERFACE: dut_inf1
     TEST:
         test1:
             INHERITS: N/A
             COMPOSITION_IN: N/A
             CREATE: YES
         test2:
-            INHERITS: N/A
-            COMPOSITION_IN: N/A
+            INHERITS: test1
+            COMPOSITION_IN: tb_top
             CREATE: YES
 
     ENVIRONMENT:
         env1:
             INHERITS: N/A
-            COMPOSITION_IN: N/A
+            COMPOSITION_IN: test2
             CREATE: YES
              
     AGENT:
         agent1:
             INHERITS: N/A
-            COMPOSITION_IN: N/A
+            COMPOSITION_IN: env1
             CREATE: YES
     DRIVER:
         driver1:
             INHERITS: N/A
-            COMPOSITION_IN: N/A
+            COMPOSITION_IN: agent1
             CREATE: YES
     GENERATOR:
         genrator1:
             INHERITS: N/A
-            COMPOSITION_IN: N/A
+            COMPOSITION_IN: env1
             CREATE: YES
-#INTERFACES:
-#    inf1:
-        
+    MONITOR:
+        monitor1:
+            INHERITS: N/A
+            COMPOSITION_IN: agent1
+            CREATE: YES
+    
+
+INTERFACES:
+    dut_inf1:
+        DATA_MEMBERS:
+            rstn:
+                TYPE: logic
+                WIDTH: 1
+            INPA:
+                TYPE: logic
+                WIDTH: width
+            INPB:
+                TYPE:
+
+MAILBOXES:
+    mbx1:
