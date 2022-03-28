@@ -1,0 +1,41 @@
+COMPONENTS:
+    TB_TOP:
+        tb_top:
+            INHERITS: N/A
+            COMPOSITION_IN: N/A
+            CREATE: YES
+        
+    TEST:
+        test1:
+            INHERITS: N/A
+            COMPOSITION_IN: N/A
+            CREATE: YES
+        test2:
+            INHERITS: N/A
+            COMPOSITION_IN: N/A
+            CREATE: YES
+
+    ENVIRONMENT:
+        env1:
+            INHERITS: N/A
+            COMPOSITION_IN: N/A
+            CREATE: YES
+             
+    AGENT:
+        agent1:
+            INHERITS: N/A
+            COMPOSITION_IN: N/A
+            CREATE: YES
+    DRIVER:
+        driver1:
+            INHERITS: N/A
+            COMPOSITION_IN: N/A
+            CREATE: YES
+    GENERATOR:
+        genrator1:
+            INHERITS: N/A
+            COMPOSITION_IN: N/A
+            CREATE: YES
+#INTERFACES:
+#    inf1:
+        
