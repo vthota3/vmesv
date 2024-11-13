@@ -30,7 +30,7 @@ class main:
         parser = argparse.ArgumentParser()
         parser.add_argument('--file',type=str,required=True)
         args = parser.parse_args()
-        print("File Provided by user: "+args.file)
+        print("File Provided by user: VPT "+args.file)
         self.yaml_loader(args.file)
 
 
